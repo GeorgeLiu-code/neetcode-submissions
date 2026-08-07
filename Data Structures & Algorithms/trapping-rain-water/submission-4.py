@@ -2,6 +2,8 @@ class Solution:
     def trap(self, height: List[int]) -> int:
         # height = [0,2,0,3,1,0,1,3,2,1]
         # small height to big is correct 
+        # if use big to small will collect more water
+        # but can't release this extra water
 
         left,right = 0,len(height)-1
         res = 0
