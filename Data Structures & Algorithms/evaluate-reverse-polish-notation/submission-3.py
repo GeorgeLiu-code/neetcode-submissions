@@ -10,7 +10,7 @@ class Solution:
         for i in range(1,len(tokens)):
             curr.next = Double(tokens[i],prev=curr) # to find next node
             curr = curr.next # find this iteration curr
-        while head is not None: # not head.val
+        while head is not None: # not head.val, because head may None first. then None.val will error
             if head.val in "+-*/":
                 left = int(head.prev.prev.val)
                 right = int(head.prev.val)
