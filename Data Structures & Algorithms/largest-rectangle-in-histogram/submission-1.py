@@ -9,9 +9,9 @@ class Solution:
                 if not stack:
                     width = i
                 else:
-                    width = i - stack[-1] - 1 # think
-                area = height * width
-                maxArea = max(maxArea,area)
+                    width = i - stack[-1] - 1 # right bound - left bound - 1
+                area = height * width         # because stack are strictly increase (height or index)
+                maxArea = max(maxArea,area)   # so right bound are always bigger than current height[i]. left bound always smaller
             stack.append(i)
         return maxArea
 
